@@ -22,10 +22,6 @@ jobs:
           wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
           chmod a+x /usr/local/bin/yq
 
-      - name: Printing
-        run: |-
-          ls
-      
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v40
