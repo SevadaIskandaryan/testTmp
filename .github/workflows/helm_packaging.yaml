@@ -4,11 +4,11 @@ on:
     branches: 
       - master
     paths:
-      - "helm-charts/"
+      - "helm-charts/**"
 
 jobs:
-  package-push-gcs:
-    name: Package and push to GCS
+  get-cwd:
+    name: get-cwd
     runs-on: ubuntu-latest
     env:
       PROJECT_ID: podcastle-repos
