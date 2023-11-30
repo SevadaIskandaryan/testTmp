@@ -1,4 +1,4 @@
-name: Package and push chart to GCS
+name: get changed file directory
 on:
   push:
     branches: 
