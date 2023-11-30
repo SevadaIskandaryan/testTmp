@@ -4,7 +4,7 @@ on:
     branches: 
       - master
     paths:
-      - "helm-charts/*/Charts.yaml"
+      - "helm-charts/"
 
 jobs:
   package-push-gcs:
