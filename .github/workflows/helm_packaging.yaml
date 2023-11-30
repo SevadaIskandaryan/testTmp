@@ -2,7 +2,7 @@ name: get changed file directory
 on:
   push:
     branches: 
-      - master
+      - main
     # paths:
     #   - "helm-charts/**"
 
