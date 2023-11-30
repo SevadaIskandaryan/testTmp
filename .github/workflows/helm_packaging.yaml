@@ -1,0 +1,28 @@
+name: Package and push chart to GCS
+on:
+  push:
+    branches: 
+      - master
+    paths:
+      - "helm-charts/*/Charts.yaml"
+
+jobs:
+  package-push-gcs:
+    name: Package and push to GCS
+    runs-on: ubuntu-latest
+    env:
+      PROJECT_ID: podcastle-repos
+      HELM_REPO_NAME: podcastle-helm-charts
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup-yq
+        run: |-
+          wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          chmod a+x /usr/local/bin/yq
+
+      - name: Printing
+        run: |-
+          echo "${{ steps.abc.outputs.modified }}"
+            
