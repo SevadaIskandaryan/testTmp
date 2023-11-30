@@ -3,8 +3,8 @@ on:
   push:
     branches: 
       - master
-    paths:
-      - "helm-charts/**"
+    # paths:
+    #   - "helm-charts/**"
 
 jobs:
   get-cwd:
