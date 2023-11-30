@@ -3,8 +3,8 @@ on:
   push:
     branches: 
       - main
-    # paths:
-    #   - "helm-charts/**"
+    paths:
+      - "helm-charts/**/Charts.yaml"
 
 jobs:
   get-cwd:
